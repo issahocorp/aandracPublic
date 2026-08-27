@@ -4,7 +4,6 @@
 		return;
 	}
 
-	const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)");
 	const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
 	function clamp(value, min, max) {
@@ -118,7 +117,6 @@
 		window.addEventListener("pointermove", onPointerMove, { passive: true });
 		document.addEventListener("mouseleave", reset);
 		window.addEventListener("blur", reset);
-		addMediaListener(finePointer, updateMode);
 		addMediaListener(reducedMotion, updateMode);
 		updateMode();
 	}
