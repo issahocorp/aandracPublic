@@ -107,7 +107,7 @@
 		}
 
 		function updateMode() {
-			enabled = finePointer.matches && !reducedMotion.matches;
+			enabled = !reducedMotion.matches;
 			hero.classList.toggle("is-title-shadow-enabled", enabled);
 
 			if (!enabled) {

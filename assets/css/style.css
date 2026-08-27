@@ -1,10 +1,10 @@
-﻿/*
+/*
 Theme Name: aandrac
 Theme URI: http://localhost/aandrac
 Author: André Castro
 Author URI: http://localhost/aandrac
 Description: Tema base do projeto aandrac.
-Version: 2.5.4
+Version: 2.5.5
 Requires at least: 6.0
 Tested up to: 7.1
 Requires PHP: 8.0
@@ -485,14 +485,11 @@ body.home .site-main {
 }
 
 .home-title {
-	--title-shadow-base-x: 0px;
-	--title-shadow-base-y: 0px;
 	--title-shadow-x: 0px;
 	--title-shadow-y: 0px;
 	--title-shadow-secondary-x: 0px;
 	--title-shadow-secondary-y: 0px;
 	position: relative;
-	isolation: isolate;
 	margin: 0 0 0.75rem;
 	font-size: clamp(4.25rem, 14vw, 9.5rem);
 	font-weight: 700;
@@ -514,8 +511,8 @@ body.home .site-main {
 	z-index: -1;
 	color: var(--color-violet);
 	transform: translate3d(
-		calc(var(--title-shadow-base-x) + var(--title-shadow-x)),
-		calc(var(--title-shadow-base-y) + var(--title-shadow-y)),
+		calc(0.07em + var(--title-shadow-x)),
+		calc(0.05em + var(--title-shadow-y)),
 		0
 	);
 }
@@ -524,13 +521,13 @@ body.home .site-main {
 	z-index: -2;
 	color: var(--color-rust);
 	transform: translate3d(
-		calc(var(--title-shadow-base-x) + var(--title-shadow-secondary-x)),
-		calc(var(--title-shadow-base-y) + var(--title-shadow-secondary-y)),
+		calc(-0.06em + var(--title-shadow-secondary-x)),
+		calc(-0.04em + var(--title-shadow-secondary-y)),
 		0
 	);
 }
 
-@media ( hover: none ), ( pointer: coarse ), ( prefers-reduced-motion: reduce ) {
+@media ( prefers-reduced-motion: reduce ) {
 	.home-title {
 		--title-shadow-x: 0px !important;
 		--title-shadow-y: 0px !important;
@@ -1701,4 +1698,3 @@ body.has-compact-header .icon-toggle__bars span {
 		transition: none;
 	}
 }
-
