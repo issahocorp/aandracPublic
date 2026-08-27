@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+	<title>aandrac — preview</title>
+	<meta name="description" content="Preview estático visual do site aandrac.">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400;1,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body
+	class="home"
+	style="--site-bg-color: linear-gradient(#02030a, #02030a); --site-bg-image: url(assets/images/nuvens-01.png)"
+>
+	<div class="site">
+		<header class="site-header">
+			<div class="site-branding">
+				<a class="site-logo-link" href="./" rel="home">
+					<p class="site-title">aandrac</p>
+				</a>
+			</div>
+
+			<button
+				type="button"
+				class="icon-toggle menu-toggle"
+				aria-expanded="false"
+				aria-controls="primary-menu"
+				aria-label="Abrir menu"
+				data-close-label="Fechar menu"
+			>
+				<span class="icon-toggle__bars" aria-hidden="true">
+					<span></span>
+					<span></span>
+					<span></span>
+				</span>
+			</button>
+
+			<nav class="site-navigation" aria-label="Menu principal">
+				<ul id="primary-menu" class="primary-menu">
+					<li class="current-menu-item"><a href="./" aria-current="page">Projetos</a></li>
+					<li><a href="#sobre">Sobre</a></li>
+					<li><a href="https://br.linkedin.com/in/aandrac/en" target="_blank" rel="noopener noreferrer">Linkedin</a></li>
+					<li><a href="https://www.behance.net/aandrac/" target="_blank" rel="noopener noreferrer">Behance</a></li>
+					<li><a href="mailto:issahocorp@gmail.com">E-mail</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main class="site-main">
+			<section class="home-hero" data-parallax-hero>
+				<div class="home-sky" aria-hidden="true">
+					<img class="home-sky__layer home-sky__layer--stars" src="assets/images/hero-layer-stars.png" alt="" loading="eager">
+					<img
+						class="home-sky__layer home-sky__layer--planet"
+						src="assets/images/hero-layer-planet.png"
+						alt=""
+						loading="eager"
+						data-scroll-layer="true"
+						data-speed="0.15"
+					>
+					<img
+						class="home-sky__layer home-sky__layer--comet home-sky__layer--comet-1"
+						src="assets/images/hero-layer-comet-01.png"
+						alt=""
+						loading="eager"
+						data-scroll-comet="true"
+						data-start="0.12"
+						data-duration="0.22"
+						data-x="18"
+						data-y="10"
+						data-direction="up"
+					>
+					<img
+						class="home-sky__layer home-sky__layer--comet home-sky__layer--comet-2"
+						src="assets/images/hero-layer-comet-02.png"
+						alt=""
+						loading="eager"
+						data-scroll-comet="true"
+						data-start="0.48"
+						data-duration="0.2"
+						data-x="-16"
+						data-y="9"
+						data-direction="down"
+					>
+					<img
+						class="home-sky__layer home-sky__layer--comet home-sky__layer--comet-3"
+						src="assets/images/hero-layer-comet-03.png"
+						alt=""
+						loading="eager"
+						data-scroll-comet="true"
+						data-start="0.82"
+						data-duration="0.24"
+						data-x="14"
+						data-y="16"
+						data-direction="down"
+					>
+					<img
+						class="home-sky__layer home-sky__layer--rocket"
+						src="assets/images/hero-layer-rocket.png"
+						alt=""
+						loading="eager"
+						data-scroll-rocket="true"
+					>
+				</div>
+
+				<div class="home-intro">
+					<h1 class="home-title" data-pointer-shadow data-title="aandrac">aandrac</h1>
+					<p class="home-subtitle">MOTION DESIGNER - ANIMAÇÃO 2D</p>
+					<div class="home-description">
+						<p>Design em movimento que conta histórias,<br> constrói mundos e dá vida a ideias.</p>
+					</div>
+				</div>
+
+				<img
+					class="insert-coin-badge"
+					src="assets/images/hero-layer-neon-sign.png"
+					alt=""
+					width="180"
+					height="64"
+					loading="eager"
+					decoding="async"
+				>
+			</section>
+
+			<div class="home-ground">
+
+	<section class="home-projetos" data-projetos-filter>
+					<div class="home-projetos__toolbar">
+				<button
+					type="button"
+					class="icon-toggle filter-toggle"
+					aria-expanded="false"
+					aria-controls="home-projetos-tabs"
+					aria-label="Abrir categorias"
+					data-close-label="Fechar categorias"
+				>
+					<span class="filter-toggle__text">
+						<span class="filter-toggle__kicker">Categorias</span>
+						<span class="filter-toggle__current" data-filter-current>Todos</span>
+					</span>
+					<span class="icon-toggle__bars" aria-hidden="true">
+						<span></span>
+						<span></span>
+						<span></span>
+					</span>
+				</button>
+				<div class="home-projetos__tabs" id="home-projetos-tabs" role="tablist" aria-label="Categorias de projetos">
+				<button
+					type="button"
+					role="tab"
+					id="tab-projetos-all"
+					aria-selected="true"
+					aria-controls="painel-projetos"
+					tabindex="0"
+					data-filter="all"
+				>
+					Todos				</button>
+									<button
+						type="button"
+						role="tab"
+						id="tab-projetos-motion-graphics"
+						aria-selected="false"
+						aria-controls="painel-projetos"
+						tabindex="-1"
+						data-filter="motion-graphics"
+					>
+						Motion Graphics					</button>
+									<button
+						type="button"
+						role="tab"
+						id="tab-projetos-curta-metragem"
+						aria-selected="false"
+						aria-controls="painel-projetos"
+						tabindex="-1"
+						data-filter="curta-metragem"
+					>
+						Curta Metragem					</button>
+									<button
+						type="button"
+						role="tab"
+						id="tab-projetos-animacao"
+						aria-selected="false"
+						aria-controls="painel-projetos"
+						tabindex="-1"
+						data-filter="animacao"
+					>
+						Animação					</button>
+								</div>
+			</div>
+		
+		<div
+			class="home-projetos__grid"
+			id="painel-projetos"
+			role="tabpanel"
+			aria-labelledby="tab-projetos-all"
+		>
+			<a
+	class="projeto-thumb"
+	href="#"
+	data-projeto-open="19"
+	data-categories="animacao"
+	aria-haspopup="dialog"
+>
+			<span class="projeto-thumb__image">
+			<img width="808" height="632" src="assets/media/default-thumbnail.webp" class="attachment-projeto-thumb size-projeto-thumb wp-post-image" alt="" decoding="async" fetchpriority="high"   />			<video
+				class="projeto-thumb__video"
+				muted
+				loop
+				playsinline
+				preload="none"
+				aria-hidden="true"
+				tabindex="-1"
+			>
+				<source src="assets/media/Ld_wMDvRJDQ_576.mp4" type="video/mp4">
+			</video>
+							<span class="projeto-thumb__tags">
+											<span class="projeto-thumb__tag">Animação</span>
+									</span>
+					</span>
+		<span class="projeto-thumb__copy">
+		<span class="projeto-thumb__play" aria-hidden="true"></span>
+		<span class="projeto-thumb__name">Aliquip dolore elit</span>
+					<span class="projeto-thumb__summary">Eiusmod ipsum nisi minim aliqua elit sed.</span>
+			</span>
+</a>
+<a
+	class="projeto-thumb"
+	href="#"
+	data-projeto-open="18"
+	data-categories="animacao"
+	aria-haspopup="dialog"
+>
+			<span class="projeto-thumb__image">
+			<img width="808" height="632" src="assets/media/default-thumbnail.webp" class="attachment-projeto-thumb size-projeto-thumb wp-post-image" alt="" decoding="async"   />			<video
+				class="projeto-thumb__video"
+				muted
+				loop
+				playsinline
+				preload="none"
+				aria-hidden="true"
+				tabindex="-1"
+			>
+				<source src="assets/media/Ld_wMDvRJDQ_576.mp4" type="video/mp4">
+			</video>
+							<span class="projeto-thumb__tags">
+											<span class="projeto-thumb__tag">Animação</span>
+									</span>
+					</span>
+		<span class="projeto-thumb__copy">
+		<span class="projeto-thumb__play" aria-hidden="true"></span>
+		<span class="projeto-thumb__name">Ipsum tempor aliquip</span>
+					<span class="projeto-thumb__summary">Nisi magna commodo lorem incididunt labore consequat adipiscing veniam.</span>
+			</span>
+</a>
+<a
+	class="projeto-thumb"
+	href="#"
+	data-projeto-open="17"
+	data-categories="animacao"
+	aria-haspopup="dialog"
+>
+			<span class="projeto-thumb__image">
+			<img width="808" height="632" src="assets/media/default-thumbnail.webp" class="attachment-projeto-thumb size-projeto-thumb wp-post-image" alt="" decoding="async"   />			<video
+				class="projeto-thumb__video"
+				muted
+				loop
+				playsinline
+				preload="none"
+				aria-hidden="true"
+				tabindex="-1"
+			>
+				<source src="assets/media/Ld_wMDvRJDQ_576.mp4" type="video/mp4">
+			</video>
+							<span class="projeto-thumb__tags">
+											<span class="projeto-thumb__tag">Animação</span>
+									</span>
+					</span>
+		<span class="projeto-thumb__copy">
+		<span class="projeto-thumb__play" aria-hidden="true"></span>
+		<span class="projeto-thumb__name">Consectetur dolore amet laboris</span>
+					<span class="projeto-thumb__summary">Aliqua enim nisi exercitation dolor sit consequat ullamco veniam.</span>
+			</span>
+</a>
+<a
+	class="projeto-thumb"
+	href="#"
+	data-projeto-open="16"
+	data-categories="curta-metragem"
+	aria-haspopup="dialog"
+>
+			<span class="projeto-thumb__image">
+			<img width="808" height="632" src="assets/media/default-thumbnail.webp" class="attachment-projeto-thumb size-projeto-thumb wp-post-image" alt="" decoding="async" loading="lazy"   />			<video
+				class="projeto-thumb__video"
+				muted
+				loop
+				playsinline
+				preload="none"
+				aria-hidden="true"
+				tabindex="-1"
+			>
+				<source src="assets/media/Ld_wMDvRJDQ_576.mp4" type="video/mp4">
+			</video>
+							<span class="projeto-thumb__tags">
+											<span class="projeto-thumb__tag">Curta Metragem</span>
+									</span>
+					</span>
+		<span class="projeto-thumb__copy">
+		<span class="projeto-thumb__play" aria-hidden="true"></span>
+		<span class="projeto-thumb__name">Consequat minim amet</span>
+					<span class="projeto-thumb__summary">Laboris enim tempor sit elit nisi consectetur dolore.</span>
+			</span>
+</a>
+<a
+	class="projeto-thumb"
+	href="#"
+	data-projeto-open="15"
+	data-categories="curta-metragem"
+	aria-haspopup="dialog"
+>
+			<span class="projeto-thumb__image">
+			<img width="808" height="632" src="assets/media/default-thumbnail.webp" class="attachment-projeto-thumb size-projeto-thumb wp-post-image" alt="" decoding="async" loading="lazy"   />			<video
+				class="projeto-thumb__video"
+				muted
+				loop
+				playsinline
+				preload="none"
+				aria-hidden="true"
+				tabindex="-1"
+			>
+				<source src="assets/media/Ld_wMDvRJDQ_576.mp4" type="video/mp4">
+			</video>
+							<span class="projeto-thumb__tags">
+											<span class="projeto-thumb__tag">Curta Metragem</span>
+									</span>
+					</span>
+		<span class="projeto-thumb__copy">
+		<span class="projeto-thumb__play" aria-hidden="true"></span>
+		<span class="projeto-thumb__name">Dolore amet adipiscing</span>
+					<span class="projeto-thumb__summary">Elit magna veniam eiusmod aliquip ipsum dolor.</span>
+			</span>
+</a>
+<a
+	class="projeto-thumb"
+	href="#"
+	data-projeto-open="14"
+	data-categories="curta-metragem"
+	aria-haspopup="dialog"
+>
+			<span class="projeto-thumb__image">
+			<img width="808" height="632" src="assets/media/default-thumbnail.webp" class="attachment-projeto-thumb size-projeto-thumb wp-post-image" alt="" decoding="async" loading="lazy"   />			<video
+				class="projeto-thumb__video"
+				muted
+				loop
+				playsinline
+				preload="none"
+				aria-hidden="true"
+				tabindex="-1"
+			>
+				<source src="assets/media/Ld_wMDvRJDQ_576.mp4" type="video/mp4">
+			</video>
+							<span class="projeto-thumb__tags">
+											<span class="projeto-thumb__tag">Curta Metragem</span>
+									</span>
+					</span>
+		<span class="projeto-thumb__copy">
+		<span class="projeto-thumb__play" aria-hidden="true"></span>
+		<span class="projeto-thumb__name">Minim quis dolor</span>
+					<span class="projeto-thumb__summary">Eiusmod tempor consectetur sit amet incididunt labore.</span>
+			</span>
+</a>
+<a
+	class="projeto-thumb"
+	href="#"
+	data-projeto-open="13"
+	data-categories="motion-graphics"
+	aria-haspopup="dialog"
+>
+			<span class="projeto-thumb__image">
+			<img width="808" height="632" src="assets/media/default-thumbnail.webp" class="attachment-projeto-thumb size-projeto-thumb wp-post-image" alt="" decoding="async" loading="lazy"   />			<video
+				class="projeto-thumb__video"
+				muted
+				loop
+				playsinline
+				preload="none"
+				aria-hidden="true"
+				tabindex="-1"
+			>
+				<source src="assets/media/Ld_wMDvRJDQ_576.mp4" type="video/mp4">
+			</video>
+							<span class="projeto-thumb__tags">
+											<span class="projeto-thumb__tag">Motion Graphics</span>
+									</span>
+					</span>
+		<span class="projeto-thumb__copy">
+		<span class="projeto-thumb__play" aria-hidden="true"></span>
+		<span class="projeto-thumb__name">Enim dolore amet veniam</span>
+					<span class="projeto-thumb__summary">Eiusmod dolor adipiscing sit veniam ipsum consectetur.</span>
+			</span>
+</a>
+<a
+	class="projeto-thumb"
+	href="#"
+	data-projeto-open="12"
+	data-categories="motion-graphics"
+	aria-haspopup="dialog"
+>
+			<span class="projeto-thumb__image">
+			<img width="808" height="632" src="assets/media/default-thumbnail.webp" class="attachment-projeto-thumb size-projeto-thumb wp-post-image" alt="" decoding="async" loading="lazy"   />			<video
+				class="projeto-thumb__video"
+				muted
+				loop
+				playsinline
+				preload="none"
+				aria-hidden="true"
+				tabindex="-1"
+			>
+				<source src="assets/media/Ld_wMDvRJDQ_576.mp4" type="video/mp4">
+			</video>
+							<span class="projeto-thumb__tags">
+											<span class="projeto-thumb__tag">Motion Graphics</span>
+									</span>
+					</span>
+		<span class="projeto-thumb__copy">
+		<span class="projeto-thumb__play" aria-hidden="true"></span>
+		<span class="projeto-thumb__name">Dolor quis aliqua</span>
+					<span class="projeto-thumb__summary">Sit quis lorem labore dolore aliquip ullamco magna.</span>
+			</span>
+</a>
+<a
+	class="projeto-thumb"
+	href="#"
+	data-projeto-open="11"
+	data-categories="motion-graphics"
+	aria-haspopup="dialog"
+>
+			<span class="projeto-thumb__image">
+			<img width="808" height="632" src="assets/media/default-thumbnail.webp" class="attachment-projeto-thumb size-projeto-thumb wp-post-image" alt="" decoding="async" loading="lazy"   />			<video
+				class="projeto-thumb__video"
+				muted
+				loop
+				playsinline
+				preload="none"
+				aria-hidden="true"
+				tabindex="-1"
+			>
+				<source src="assets/media/Ld_wMDvRJDQ_576.mp4" type="video/mp4">
+			</video>
+							<span class="projeto-thumb__tags">
+											<span class="projeto-thumb__tag">Motion Graphics</span>
+									</span>
+					</span>
+		<span class="projeto-thumb__copy">
+		<span class="projeto-thumb__play" aria-hidden="true"></span>
+		<span class="projeto-thumb__name">Exercitation tempor ipsum</span>
+					<span class="projeto-thumb__summary">Sed veniam adipiscing elit labore.</span>
+			</span>
+</a>
+		</div>
+
+		<p class="home-projetos__empty" data-filter-empty hidden>
+			Nenhum projeto nesta categoria.		</p>
+	</section>
+</div>
+
+	<div class="projeto-modal-data" hidden>
+		<template id="projeto-modal-19">
+	<div data-slot="video">
+		<video class="projeto-modal__media" controls autoplay playsinline src="assets/media/Ld_wMDvRJDQ_576.mp4"></video>	</div>
+	<div data-slot="content">
+		<div class="projeto-conteudo"><div class="projeto-bloco projeto-bloco--texto"><h1>Lorem Ipsum</h1>
+</div><div class="projeto-bloco projeto-bloco--texto"><p>&quot;Mind the Gap&quot; é um projeto acadêmico produzido no CAV (Centro de Audiovisual) de São Bernardo do Campo. Assinei o supercurta como Editor, Ilustrador, Animador e Diretor de Arte.</p>
+</div><figure class="projeto-bloco projeto-bloco--imagem"><img width="800" height="474" src="assets/media/cinelab-delirios-composicao-horizontal-1024x607.jpg" class="attachment-large size-large" alt="" decoding="async" loading="lazy"   /></figure><div class="projeto-bloco projeto-bloco--texto"><h2>Lorem Ipsum</h2>
+</div><div class="projeto-bloco projeto-bloco--texto"><p>A linguagem visual desse trabalho é fortemente inspirada por quadrinhos; algumas referências pessoais foram Scott Pilgrim Contra o Mundo e Homem-Aranha no Aranhaverso.</p>
+<p>Após a montagem, feita pelo Gabriel Raio, toda a edição, animação e adição de efeitos visuais foi feita por mim. Também ilustrei as artes dos cenários e as personagens foram desenhadas pelo Rogério Martins e adaptadas por mim.</p>
+<p>Seguem algumas imagens da obra:</p>
+</div><figure class="projeto-bloco projeto-bloco--imagem"><img width="800" height="474" src="assets/media/cinelab-delirios-composicao-horizontal-1024x607.jpg" class="attachment-large size-large" alt="" decoding="async" loading="lazy"   /></figure></div>	</div>
+</template>
+<template id="projeto-modal-18">
+	<div data-slot="video">
+		<video class="projeto-modal__media" controls autoplay playsinline src="assets/media/Ld_wMDvRJDQ_576.mp4"></video>	</div>
+	<div data-slot="content">
+		<div class="projeto-conteudo"><div class="projeto-bloco projeto-bloco--texto"><h1>Lorem Ipsum</h1>
+</div><div class="projeto-bloco projeto-bloco--texto"><p>&quot;Mind the Gap&quot; é um projeto acadêmico produzido no CAV (Centro de Audiovisual) de São Bernardo do Campo. Assinei o supercurta como Editor, Ilustrador, Animador e Diretor de Arte.</p>
+</div><figure class="projeto-bloco projeto-bloco--imagem"><img width="800" height="474" src="assets/media/cinelab-delirios-composicao-horizontal-1024x607.jpg" class="attachment-large size-large" alt="" decoding="async" loading="lazy"   /></figure><div class="projeto-bloco projeto-bloco--texto"><h2>Lorem Ipsum</h2>
+</div><div class="projeto-bloco projeto-bloco--texto"><p>A linguagem visual desse trabalho é fortemente inspirada por quadrinhos; algumas referências pessoais foram Scott Pilgrim Contra o Mundo e Homem-Aranha no Aranhaverso.</p>
+<p>Após a montagem, feita pelo Gabriel Raio, toda a edição, animação e adição de efeitos visuais foi feita por mim. Também ilustrei as artes dos cenários e as personagens foram desenhadas pelo Rogério Martins e adaptadas por mim.</p>
+<p>Seguem algumas imagens da obra:</p>
+</div><figure class="projeto-bloco projeto-bloco--imagem"><img width="800" height="474" src="assets/media/cinelab-delirios-composicao-horizontal-1024x607.jpg" class="attachment-large size-large" alt="" decoding="async" loading="lazy"   /></figure></div>	</div>
+</template>
+<template id="projeto-modal-17">
+	<div data-slot="video">
+		<video class="projeto-modal__media" controls autoplay playsinline src="assets/media/Ld_wMDvRJDQ_576.mp4"></video>	</div>
+	<div data-slot="content">
+		<div class="projeto-conteudo"><div class="projeto-bloco projeto-bloco--texto"><h1>Lorem Ipsum</h1>
+</div><div class="projeto-bloco projeto-bloco--texto"><p>&quot;Mind the Gap&quot; é um projeto acadêmico produzido no CAV (Centro de Audiovisual) de São Bernardo do Campo. Assinei o supercurta como Editor, Ilustrador, Animador e Diretor de Arte.</p>
+</div><figure class="projeto-bloco projeto-bloco--imagem"><img width="800" height="474" src="assets/media/cinelab-delirios-composicao-horizontal-1024x607.jpg" class="attachment-large size-large" alt="" decoding="async" loading="lazy"   /></figure><div class="projeto-bloco projeto-bloco--texto"><h2>Lorem Ipsum</h2>
+</div><div class="projeto-bloco projeto-bloco--texto"><p>A linguagem visual desse trabalho é fortemente inspirada por quadrinhos; algumas referências pessoais foram Scott Pilgrim Contra o Mundo e Homem-Aranha no Aranhaverso.</p>
+<p>Após a montagem, feita pelo Gabriel Raio, toda a edição, animação e adição de efeitos visuais foi feita por mim. Também ilustrei as artes dos cenários e as personagens foram desenhadas pelo Rogério Martins e adaptadas por mim.</p>
+<p>Seguem algumas imagens da obra:</p>
+</div><figure class="projeto-bloco projeto-bloco--imagem"><img width="800" height="474" src="assets/media/cinelab-delirios-composicao-horizontal-1024x607.jpg" class="attachment-large size-large" alt="" decoding="async" loading="lazy"   /></figure></div>	</div>
+</template>
+<template id="projeto-modal-16">
+	<div data-slot="video">
+		<video class="projeto-modal__media" controls autoplay playsinline src="assets/media/Ld_wMDvRJDQ_576.mp4"></video>	</div>
+	<div data-slot="content">
+		<div class="projeto-conteudo"><div class="projeto-bloco projeto-bloco--texto"><h1>Lorem Ipsum</h1>
+</div><div class="projeto-bloco projeto-bloco--texto"><p>&quot;Mind the Gap&quot; é um projeto acadêmico produzido no CAV (Centro de Audiovisual) de São Bernardo do Campo. Assinei o supercurta como Editor, Ilustrador, Animador e Diretor de Arte.</p>
+</div><figure class="projeto-bloco projeto-bloco--imagem"><img width="800" height="474" src="assets/media/cinelab-delirios-composicao-horizontal-1024x607.jpg" class="attachment-large size-large" alt="" decoding="async" loading="lazy"   /></figure><div class="projeto-bloco projeto-bloco--texto"><h2>Lorem Ipsum</h2>
+</div><div class="projeto-bloco projeto-bloco--texto"><p>A linguagem visual desse trabalho é fortemente inspirada por quadrinhos; algumas referências pessoais foram Scott Pilgrim Contra o Mundo e Homem-Aranha no Aranhaverso.</p>
+<p>Após a montagem, feita pelo Gabriel Raio, toda a edição, animação e adição de efeitos visuais foi feita por mim. Também ilustrei as artes dos cenários e as personagens foram desenhadas pelo Rogério Martins e adaptadas por mim.</p>
+<p>Seguem algumas imagens da obra:</p>
+</div><figure class="projeto-bloco projeto-bloco--imagem"><img width="800" height="474" src="assets/media/cinelab-delirios-composicao-horizontal-1024x607.jpg" class="attachment-large size-large" alt="" decoding="async" loading="lazy"   /></figure></div>	</div>
+</template>
+<template id="projeto-modal-15">
+	<div data-slot="video">
+		<video class="projeto-modal__media" controls autoplay playsinline src="assets/media/Ld_wMDvRJDQ_576.mp4"></video>	</div>
+	<div data-slot="content">
+		<div class="projeto-conteudo"><div class="projeto-bloco projeto-bloco--texto"><h1>Lorem Ipsum</h1>
+</div><div class="projeto-bloco projeto-bloco--texto"><p>&quot;Mind the Gap&quot; é um projeto acadêmico produzido no CAV (Centro de Audiovisual) de São Bernardo do Campo. Assinei o supercurta como Editor, Ilustrador, Animador e Diretor de Arte.</p>
+</div><figure class="projeto-bloco projeto-bloco--imagem"><img width="800" height="474" src="assets/media/cinelab-delirios-composicao-horizontal-1024x607.jpg" class="attachment-large size-large" alt="" decoding="async" loading="lazy"   /></figure><div class="projeto-bloco projeto-bloco--texto"><h2>Lorem Ipsum</h2>
+</div><div class="projeto-bloco projeto-bloco--texto"><p>A linguagem visual desse trabalho é fortemente inspirada por quadrinhos; algumas referências pessoais foram Scott Pilgrim Contra o Mundo e Homem-Aranha no Aranhaverso.</p>
+<p>Após a montagem, feita pelo Gabriel Raio, toda a edição, animação e adição de efeitos visuais foi feita por mim. Também ilustrei as artes dos cenários e as personagens foram desenhadas pelo Rogério Martins e adaptadas por mim.</p>
+<p>Seguem algumas imagens da obra:</p>
+</div><figure class="projeto-bloco projeto-bloco--imagem"><img width="800" height="474" src="assets/media/cinelab-delirios-composicao-horizontal-1024x607.jpg" class="attachment-large size-large" alt="" decoding="async" loading="lazy"   /></figure></div>	</div>
+</template>
+<template id="projeto-modal-14">
+	<div data-slot="video">
+		<video class="projeto-modal__media" controls autoplay playsinline src="assets/media/Ld_wMDvRJDQ_576.mp4"></video>	</div>
+	<div data-slot="content">
+		<div class="projeto-conteudo"><div class="projeto-bloco projeto-bloco--texto"><h1>Lorem Ipsum</h1>
+</div><div class="projeto-bloco projeto-bloco--texto"><p>&quot;Mind the Gap&quot; é um projeto acadêmico produzido no CAV (Centro de Audiovisual) de São Bernardo do Campo. Assinei o supercurta como Editor, Ilustrador, Animador e Diretor de Arte.</p>
+</div><figure class="projeto-bloco projeto-bloco--imagem"><img width="800" height="474" src="assets/media/cinelab-delirios-composicao-horizontal-1024x607.jpg" class="attachment-large size-large" alt="" decoding="async" loading="lazy"   /></figure><div class="projeto-bloco projeto-bloco--texto"><h2>Lorem Ipsum</h2>
+</div><div class="projeto-bloco projeto-bloco--texto"><p>A linguagem visual desse trabalho é fortemente inspirada por quadrinhos; algumas referências pessoais foram Scott Pilgrim Contra o Mundo e Homem-Aranha no Aranhaverso.</p>
+<p>Após a montagem, feita pelo Gabriel Raio, toda a edição, animação e adição de efeitos visuais foi feita por mim. Também ilustrei as artes dos cenários e as personagens foram desenhadas pelo Rogério Martins e adaptadas por mim.</p>
+<p>Seguem algumas imagens da obra:</p>
+</div><figure class="projeto-bloco projeto-bloco--imagem"><img width="800" height="474" src="assets/media/cinelab-delirios-composicao-horizontal-1024x607.jpg" class="attachment-large size-large" alt="" decoding="async" loading="lazy"   /></figure></div>	</div>
+</template>
+<template id="projeto-modal-13">
+	<div data-slot="video">
+		<video class="projeto-modal__media" controls autoplay playsinline src="assets/media/Ld_wMDvRJDQ_576.mp4"></video>	</div>
+	<div data-slot="content">
+		<div class="projeto-conteudo"><div class="projeto-bloco projeto-bloco--texto"><h1>Lorem Ipsum</h1>
+</div><div class="projeto-bloco projeto-bloco--texto"><p>&quot;Mind the Gap&quot; é um projeto acadêmico produzido no CAV (Centro de Audiovisual) de São Bernardo do Campo. Assinei o supercurta como Editor, Ilustrador, Animador e Diretor de Arte.</p>
+</div><figure class="projeto-bloco projeto-bloco--imagem"><img width="800" height="474" src="assets/media/cinelab-delirios-composicao-horizontal-1024x607.jpg" class="attachment-large size-large" alt="" decoding="async" loading="lazy"   /></figure><div class="projeto-bloco projeto-bloco--texto"><h2>Lorem Ipsum</h2>
+</div><div class="projeto-bloco projeto-bloco--texto"><p>A linguagem visual desse trabalho é fortemente inspirada por quadrinhos; algumas referências pessoais foram Scott Pilgrim Contra o Mundo e Homem-Aranha no Aranhaverso.</p>
+<p>Após a montagem, feita pelo Gabriel Raio, toda a edição, animação e adição de efeitos visuais foi feita por mim. Também ilustrei as artes dos cenários e as personagens foram desenhadas pelo Rogério Martins e adaptadas por mim.</p>
+<p>Seguem algumas imagens da obra:</p>
+</div><figure class="projeto-bloco projeto-bloco--imagem"><img width="800" height="474" src="assets/media/cinelab-delirios-composicao-horizontal-1024x607.jpg" class="attachment-large size-large" alt="" decoding="async" loading="lazy"   /></figure></div>	</div>
+</template>
+<template id="projeto-modal-12">
+	<div data-slot="video">
+		<video class="projeto-modal__media" controls autoplay playsinline src="assets/media/Ld_wMDvRJDQ_576.mp4"></video>	</div>
+	<div data-slot="content">
+		<div class="projeto-conteudo"><div class="projeto-bloco projeto-bloco--texto"><h1>Lorem Ipsum</h1>
+</div><div class="projeto-bloco projeto-bloco--texto"><p>&quot;Mind the Gap&quot; é um projeto acadêmico produzido no CAV (Centro de Audiovisual) de São Bernardo do Campo. Assinei o supercurta como Editor, Ilustrador, Animador e Diretor de Arte.</p>
+</div><figure class="projeto-bloco projeto-bloco--imagem"><img width="800" height="474" src="assets/media/cinelab-delirios-composicao-horizontal-1024x607.jpg" class="attachment-large size-large" alt="" decoding="async" loading="lazy"   /></figure><div class="projeto-bloco projeto-bloco--texto"><h2>Lorem Ipsum</h2>
+</div><div class="projeto-bloco projeto-bloco--texto"><p>A linguagem visual desse trabalho é fortemente inspirada por quadrinhos; algumas referências pessoais foram Scott Pilgrim Contra o Mundo e Homem-Aranha no Aranhaverso.</p>
+<p>Após a montagem, feita pelo Gabriel Raio, toda a edição, animação e adição de efeitos visuais foi feita por mim. Também ilustrei as artes dos cenários e as personagens foram desenhadas pelo Rogério Martins e adaptadas por mim.</p>
+<p>Seguem algumas imagens da obra:</p>
+</div><figure class="projeto-bloco projeto-bloco--imagem"><img width="800" height="474" src="assets/media/cinelab-delirios-composicao-horizontal-1024x607.jpg" class="attachment-large size-large" alt="" decoding="async" loading="lazy"   /></figure></div>	</div>
+</template>
+<template id="projeto-modal-11">
+	<div data-slot="video">
+		<video class="projeto-modal__media" controls autoplay playsinline src="assets/media/Ld_wMDvRJDQ_576.mp4"></video>	</div>
+	<div data-slot="content">
+		<div class="projeto-conteudo"><div class="projeto-bloco projeto-bloco--texto"><h1>Lorem Ipsum</h1>
+</div><div class="projeto-bloco projeto-bloco--texto"><p>&quot;Mind the Gap&quot; é um projeto acadêmico produzido no CAV (Centro de Audiovisual) de São Bernardo do Campo. Assinei o supercurta como Editor, Ilustrador, Animador e Diretor de Arte.</p>
+</div><figure class="projeto-bloco projeto-bloco--imagem"><img width="800" height="474" src="assets/media/cinelab-delirios-composicao-horizontal-1024x607.jpg" class="attachment-large size-large" alt="" decoding="async" loading="lazy"   /></figure><div class="projeto-bloco projeto-bloco--texto"><h2>Lorem Ipsum</h2>
+</div><div class="projeto-bloco projeto-bloco--texto"><p>A linguagem visual desse trabalho é fortemente inspirada por quadrinhos; algumas referências pessoais foram Scott Pilgrim Contra o Mundo e Homem-Aranha no Aranhaverso.</p>
+<p>Após a montagem, feita pelo Gabriel Raio, toda a edição, animação e adição de efeitos visuais foi feita por mim. Também ilustrei as artes dos cenários e as personagens foram desenhadas pelo Rogério Martins e adaptadas por mim.</p>
+<p>Seguem algumas imagens da obra:</p>
+</div><figure class="projeto-bloco projeto-bloco--imagem"><img width="800" height="474" src="assets/media/cinelab-delirios-composicao-horizontal-1024x607.jpg" class="attachment-large size-large" alt="" decoding="async" loading="lazy"   /></figure></div>	</div>
+</template>
+	</div>
+
+	<div
+		id="projeto-modal"
+		class="projeto-modal"
+		hidden
+	>
+		<div class="projeto-modal__overlay" data-projeto-close tabindex="-1"></div>
+		<div
+			class="projeto-modal__layout"
+			role="dialog"
+			aria-modal="true"
+			aria-labelledby="projeto-modal-title"
+		>
+			<h2 id="projeto-modal-title" class="screen-reader-text">Projeto</h2>
+			<button
+				type="button"
+				class="projeto-modal__close"
+				data-projeto-close
+				aria-label="Fechar"
+			>
+				<svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true" focusable="false">
+					<path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M6 6l12 12M18 6L6 18" />
+				</svg>
+			</button>
+			<div class="projeto-modal__col projeto-modal__col--video">
+				<div class="projeto-modal__player" data-projeto-modal-video></div>
+			</div>
+			<div class="projeto-modal__col projeto-modal__col--content" data-projeto-modal-content></div>
+		</div>
+	</div>
+	
+		<footer class="site-footer" id="sobre">
+			<div class="site-footer__brand">
+				<p class="site-footer__name"><a href="./">aandrac</a></p>
+				<p class="site-footer__subtitle">MOTION DESIGNER - ANIMAÇÃO 2D</p>
+			</div>
+			<nav class="site-footer__social" aria-label="Redes sociais">
+				<ul class="footer-social-menu">
+					<li><a href="https://br.linkedin.com/in/aandrac/en" target="_blank" rel="noopener noreferrer">Linkedin</a></li>
+					<li><a href="https://www.behance.net/aandrac/" target="_blank" rel="noopener noreferrer">Behance</a></li>
+					<li><a href="mailto:issahocorp@gmail.com">E-mail</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div>
+
+	<script src="assets/js/nav-toggle.js" defer></script>
+	<script src="assets/js/sticky-header.js" defer></script>
+	<script src="assets/js/home-filter.js" defer></script>
+	<script src="assets/js/home-modal.js" defer></script>
+	<script src="assets/js/hero-parallax.js" defer></script>
+</body>
+</html>
