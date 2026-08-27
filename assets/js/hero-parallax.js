@@ -24,8 +24,8 @@
 			return;
 		}
 
-		const shadowShift = 6;
-		const secondaryShift = 4;
+		const shadowShift = 4;
+		const secondaryShift = 2.5;
 		const shadowEase = 0.13;
 		const secondaryEase = 0.08;
 		let shadowTargetX = 0;

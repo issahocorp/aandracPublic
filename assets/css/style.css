@@ -4,7 +4,7 @@ Theme URI: http://localhost/aandrac
 Author: André Castro
 Author URI: http://localhost/aandrac
 Description: Tema base do projeto aandrac.
-Version: 2.5.5
+Version: 2.5.6
 Requires at least: 6.0
 Tested up to: 7.1
 Requires PHP: 8.0
@@ -511,8 +511,8 @@ body.home .site-main {
 	z-index: -1;
 	color: var(--color-violet);
 	transform: translate3d(
-		calc(0.07em + var(--title-shadow-x)),
-		calc(0.05em + var(--title-shadow-y)),
+		calc(0.02em + var(--title-shadow-x)),
+		calc(0.015em + var(--title-shadow-y)),
 		0
 	);
 }
@@ -521,8 +521,8 @@ body.home .site-main {
 	z-index: -2;
 	color: var(--color-rust);
 	transform: translate3d(
-		calc(-0.06em + var(--title-shadow-secondary-x)),
-		calc(-0.04em + var(--title-shadow-secondary-y)),
+		calc(-0.018em + var(--title-shadow-secondary-x)),
+		calc(-0.012em + var(--title-shadow-secondary-y)),
 		0
 	);
 }
